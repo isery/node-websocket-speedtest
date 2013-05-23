@@ -1,13 +1,22 @@
 node-websocket-speedtest
 ========================
 
-testing the speed and maximum of websockets in node.js
+testing the speed and maximum of websockets in node.js and PHP
 
 ```javascript
 //May be changed for testing
-var CONNECTIONS = 240;
-var CONCURRENT = 60;
+var CONNECTIONS = 200;
+var CONCURRENT = 50;
 var INTERVAL = 1000;
 ```
-![plot](http://multimediatechnology.at/~fhs33718/upload/diagramm_1.png)
-![plot3](http://multimediatechnology.at/~fhs33718/upload/diagramm_2.png)
+
+```javascript
+Node Server
+Node test
+
+php Server.php
+Node test
+```
+
+If the Server crashes when you try a couple hundred connections then its most likely because of a limitation of your OS.
+Most of the times it is the file-descriptor or open-files max.
